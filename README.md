@@ -39,6 +39,6 @@ Step 3: Store and retrieve orders
 
 To run: 
 
-git clone https://github.com/michaelcordero/amex-order-service.git
-gradle build
-gradle run
+1. git clone https://github.com/michaelcordero/amex-order-service.git
+2. gradle build
+3. gradle run
