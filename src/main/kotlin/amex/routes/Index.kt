@@ -12,6 +12,6 @@ class Index
 @KtorExperimentalLocationsAPI
 fun Route.index() {
     get<Index> {
-        call.respondText { "Hello World!" }
+        call.respondText { "Hello Amex!" }
     }
 }

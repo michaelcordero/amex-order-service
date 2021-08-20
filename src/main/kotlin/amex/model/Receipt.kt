@@ -18,13 +18,13 @@ data class Receipt @JsonCreator constructor(
         return applesCost + orangesCost
     }
 
-    // This may not be necessary because of toString()
-    fun summary(): String {
-        return "============== Order Summary========== \n\n Apples: ${apples ?: 0} \n\n Oranges: ${oranges ?: 0} \n\n Total: $${total()} \n" +
-                "======================================"
-    }
-
-    override fun toString(): String {
-        return "Receipt(apples=$apples, oranges=$oranges)"
+    // This was not necessary, but leaving in for readability.
+    fun summary(id: Int?): String {
+        return "\n============== Order Summary==========\n" +
+                "Id: ${id} \n" +
+                "Apples: ${apples ?: 0} \n" +
+                "Oranges: ${oranges ?: 0} \n" +
+                "Total: $${total()} \n" +
+                "======================================\n"
     }
 }
