@@ -23,7 +23,7 @@ data class Receipt @JsonCreator constructor(
     // This was not necessary, but leaving in for readability.
     fun summary(id: Int?): String {
         return "\n============== Order Summary==========\n" +
-                "Id: ${id} \n" +
+                "Id: $id \n" +
                 "Apples: ${apples ?: 0} \n" +
                 "Oranges: ${oranges ?: 0} \n" +
                 "Total: $${total()} \n" +

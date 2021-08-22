@@ -44,7 +44,7 @@ fun Route.order() {
             log.info("GET /order/{id} requested")
             var receipt: Receipt? = Receipt(0,0)
             if (it.id != null) {
-                receipt = db.get(it.id.toInt())
+                receipt = db[it.id.toInt()]
             }
             if (receipt != null) {
                 call.respond(status = HttpStatusCode.OK, message = receipt.summary(it.id?.toInt()))
